@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        position: relative;
+        text-decoration: none;
+        color: #000;
+      }
+
+      a::after {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 10px;
+        background-color: yellow;
+        content: "";
+        z-index: -1;
+        transition: all 500ms ease-in;
+      }
+
+      a:hover:after {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="">샘플텍스트</a>
+  </body>
+</html>
